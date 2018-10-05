@@ -29,8 +29,8 @@ public class TestCase1 {
 		 
 		   DesiredCapabilities dr=null;
           // if(browserType.equals("firefox")){
-           dr=DesiredCapabilities.chrome();
-           dr.setBrowserName("chrome");
+           dr=DesiredCapabilities.firefox();
+           dr.setBrowserName("firefox");
           // dr.setPlatform(Platform.WINDOWS);
        
             driver=new RemoteWebDriver(new URL("http://52.90.151.23:4444/wd/hub"), dr);
