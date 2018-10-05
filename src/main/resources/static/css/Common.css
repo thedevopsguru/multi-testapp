@@ -1,0 +1,131 @@
+@charset "utf-8";
+.hr_color {
+	border: none;
+}
+body {
+	background-color: #F2F2F2;
+	height: 100%;
+}
+.bg_spacing {
+	height:70px;
+	background-color: #F2F2F2;
+}
+.search_icon_background {
+	background-color: #00AED0;
+}
+html{
+  height:100%
+}.Genpact_blue {
+	background-color: #5B9BD5;
+}
+.Genpact_red {
+	background-color: #F0585E;
+}
+.Genpact_dark_blue {
+	background-color: #19335F;
+}
+.Genpact_dark_blue_border {
+ 	border-color: #19335F;
+}
+.Genpact_custom_Blue_color{
+	background-color: #5ec1ec;
+}
+.Genpact_white_bg {
+	background-color: white !important;
+}
+:root {
+  --input-padding-x: 1.5rem;
+  --input-padding-y: .75rem;
+}
+/*--Scroll CSS--*/
+.scroll_css::-webkit-scrollbar-track {
+      box-shadow: rgba(0, 0, 0, 0.3) 0px 0px 6px inset;
+      background-color: rgb(245, 245, 245);
+    }
+    .scroll_css::-webkit-scrollbar {
+      width: 10px;
+      background-color: rgb(245, 245, 245);
+    }
+    .scroll_css::-webkit-scrollbar-thumb {
+      background-color: rgba(7, 50, 98, 0.8);
+      background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.2) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.2) 50%, rgba(255, 255, 255, 0.2) 75%, transparent 75%, transparent);
+    }
+/*Notifications Code*/
+.notifications{
+	max-width: 300px;
+	max-height: 100%;
+	background-color: white;
+	box-shadow: 0px 2px 3px 0px rgba(0,0,0,0.15);
+}
+.nobull {
+list-style-type: none;
+}
+.custom_padding_zero_allsides {
+	padding:0px;
+}
+.background_color_none{
+	background: none !important;
+}
+.color_white{
+	color: white !important;
+}
+.color_black{
+	color: black !important;
+}
+.custom_a_link_colr {
+	color: #007bff;
+}
+.custom_a_link_colr:hover {
+	color: #007bff;
+	opacity: 0.5;
+}
+.custom_a_link_colr_imp{
+	color: #007bff !important;
+}
+.pointer {cursor: pointer;}
+.color_black_custom{
+	opacity: 0.5;
+}
+.opacity_50{
+	opacity: 0.5;
+}
+form.custom_search input[type=text] {
+    padding: 10px;
+    font-size: 17px;
+    border: 1px solid grey;
+    float: left;
+    width: 80%;
+    background: #f1f1f1;
+}
+
+form.custom_search button {
+    float: left;
+    width: 20%;
+    padding: 10px;
+    background: #19335F;
+    color: white;
+    font-size: 17px;
+    border: 1px solid grey;
+    border-left: none;
+    cursor: pointer;
+}
+
+form.custom_search button:hover {
+    background: #0b7dda;
+}
+
+form.custom_search::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+.thead-custom-color{
+	background-color: #5ec1ec;	
+}
+.custom_table_css td {
+	padding-left: 24px;
+	width:20%;
+}
+.custom_table_css th {
+	padding-left: 24px;
+}

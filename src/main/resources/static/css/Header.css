@@ -1,0 +1,27 @@
+@charset "utf-8";
+.Header {
+}
+.header_bg {
+	box-shadow: 0px 1px 3px 0px rgba(0,0,0,0.15) !important;
+}
+.image_width {
+	width: 150px;
+}
+.noti_icon_status{
+	display: none;
+}
+.my-a {
+}
+.logout_icon_padding_margin {
+	padding-top: 5px;
+}
+.custom_text_decoration{
+	text-decoration: none !important;
+}.navbar-right {
+}
+.mr-aut {
+}
+.custom_padding_top_bottom{
+	padding-top: 8px !important;
+	padding-bottom: 8px !important;
+}
