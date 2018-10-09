@@ -24,8 +24,8 @@
 		    echo ":::->" + job_name 
 	        
 	def issue = [fields: [ project: [key: 'TEST'],
-	                       summary: '$job_name : $build_num - Failed for Selenium test cases hence raising Jira Issue',
-	                       description: 'New JIRA issue has been created from Jenkins. Jenkins Build : $build_num - Failed for Selenium test cases hence raising Jira Issue',
+			      summary: '${job_name} : ${build_num} - Failed for Selenium test cases hence raising Jira Issue',
+	                       description: 'New JIRA issue has been created from Jenkins. Jenkins Build : ${build_num} - Failed for Selenium test cases hence raising Jira Issue',
 	                       issuetype: [name: 'Bug']]]
 	def newIssue = jiraNewIssue issue: issue, site: 'Jira Server'
 	echo newIssue.data.key
