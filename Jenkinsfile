@@ -17,7 +17,7 @@
 	echo "Connecting with jira"
 	
 	        echo "build stage" + currentBuild.result
-            echo "build number" +  $BUILD_NUMBER
+          //  echo "build number" +  $BUILD_NUMBER
             echo "BUILD_NUMBER=${env.BUILD_NUMBER}"
 
 	        
