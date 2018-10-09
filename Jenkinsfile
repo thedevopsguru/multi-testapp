@@ -10,21 +10,21 @@ node ('ubuntu') {
    -D- \
    -u admin:admin \
    -X POST \
-   --data {
-    "fields": {
-       "project":
-       {
-          "key": "TEST"
-       },
-       "summary": "Issue from Jenkinsfile for selenium test case failures.",
-       "description": "Creating of an issue using project keys and issue type names using the REST API",
-       "issuetype": {
-          "name": "Bug"
-       }
-   }
-}
+   --data { \
+    "fields": { \
+       "project": \
+       { \
+          "key": "TEST" \
+       }, \
+       "summary": "Issue from Jenkinsfile for selenium test case failures.", \
+       "description": "Creating of an issue using project keys and issue type names using the REST API", \
+       "issuetype": { \
+          "name": "Bug" \
+       } \
+   } \
+} \
  \
    -H "Content-Type: application/json" \
-   http://52.90.151.23:9090/rest/api/2/issue/'
+   http://52.90.151.23:9090/rest/api/2/issue/' 
     }
         }
