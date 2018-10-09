@@ -19,7 +19,9 @@
 	        echo "build stage" + currentBuild.result
           //  echo "build number" +  $BUILD_NUMBER
             echo "BUILD_NUMBER=${env.BUILD_NUMBER}"
+		    
 		     echo "JOB_NAME=${env.JOB_NAME}" 
+		    echo "job_name" 
 
 	        
 	        if(currentBuild.result=='FAILURE'){  
@@ -33,7 +35,7 @@
 	        echo "Nothing failed, so there is no need to create Jira issue"
 			
 			def issue = [fields: [ project: [key: 'TEST'],
-					      summary: '{env.JOB_NAME} : {env.BUILD_NUMBER} - Failed for Selenium test cases hence raising Jira Issue',
+					      summary: 'JOB_NAME : {env.BUILD_NUMBER} - Failed for Selenium test cases hence raising Jira Issue',
 	                       description: 'New JIRA issue has been created from Jenkins. Jenkins Build : env.BUILD_NUMBER - Failed for Selenium test cases hence raising Jira Issue',
 	                       issuetype: [name: 'Bug']]]
 	def newIssue = jiraNewIssue issue: issue, site: 'Jira Server'
