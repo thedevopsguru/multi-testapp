@@ -10,14 +10,11 @@ node ('ubuntu') {
      
 echo "Connecting with jira"
 withEnv(['JIRA_SITE=******']) {
-def testIssue = [fields: [ project: [id: 10000],
-summary: "New JIRA Created from Jenkins.",
-description: "New JIRA Created from Jenkins.",
-                   issuetype: [id: 3],
-                   "customfield_10200": { "name": "TEST" } 
- ]]            
-response = jiraNewIssue issue: testIssue
-    echo response.successful.toString()
-echo response.data.toString()
+def issue = [fields: [ project: [key: 'TEST'],
+                       summary: 'New JIRA Created from Jenkins.',
+                       description: 'New JIRA Created from Jenkins.',
+                       issuetype: [name: 'Task']]]
+def newIssue = jiraNewIssue issue: issue, site: 'http://52.90.151.23:9090/projects/TEST/'
+echo newIssue.data.key
     }
         }
