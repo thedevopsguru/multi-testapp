@@ -15,7 +15,6 @@ node ('ubuntu') {
      
 echo "Connecting with jira"
 
-        echo "previous stage" + previousBuild.result
         echo "build stage" + currentBuild.result
         
         if(currentBuild.result=='FAILURE'){  
