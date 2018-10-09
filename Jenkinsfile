@@ -8,17 +8,16 @@ node ('ubuntu') {
          }
     stage ('Jira issue update in case of failure') {
      
-        def testIssue = [fields: [ // id or key must present for project.
-                               project: [id: '10000'],
-                               summary: 'New JIRA Created from Jenkins.',
-                               description: 'New JIRA Created from Jenkins.',
-                               customfield_1000: 'customValue',
-                               // id or name must present for issuetype.
-                               issuetype: [id: '3']]]
-
-    response = jiraEditIssue idOrKey: 'TEST', issue: testIssue
-
+echo "Connecting with jira"
+withEnv(['JIRA_SITE=******']) {
+def testIssue = [fields: [ project: [id: 10000],
+summary: "New JIRA Created from Jenkins.",
+description: "New JIRA Created from Jenkins.",
+                   issuetype: [id: 3],
+                   "customfield_10200": { "name": "TEST" } 
+ ]]            
+response = jiraNewIssue issue: testIssue
     echo response.successful.toString()
-    echo response.data.toString()
+echo response.data.toString()
     }
         }
