@@ -22,15 +22,11 @@
 		     echo "JOB_NAME=${env.JOB_NAME}" 
 
 	        
-	//        if(currentBuild.result=='FAILURE'){  
 	def issue = [fields: [ project: [key: 'TEST'],
 	                       summary: '${env.JOB_NAME} : ${env.BUILD_NUMBER} - Failed for Selenium test cases hence raising Jira Issue',
 	                       description: 'New JIRA issue has been created from Jenkins. Jenkins Build : $BUILD_NUMBER - Failed for Selenium test cases hence raising Jira Issue',
 	                       issuetype: [name: 'Bug']]]
 	def newIssue = jiraNewIssue issue: issue, site: 'Jira Server'
 	echo newIssue.data.key
-	    //    }else {
-	 //       echo "Nothing failed, so there is no need to create Jira issue"
-	   //     }
-	    }
-	        }
+    }
+ }
