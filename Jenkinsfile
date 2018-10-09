@@ -10,17 +10,13 @@ node ('ubuntu') {
      
 echo "Connecting with jira"
 
-def testIssue = [fields: [ // id or key must present for project.
-                               project: [key: 'TEST'],
-                               summary: 'New JIRA Created from Jenkins.',
-                               description: 'New JIRA Created from Jenkins.',
-                               customfield_1000: 'customValue',
-                               // id or name must present for issueType.
-                               issuetype: [id: '3']]]
+               
+        def issue = [fields: [ project: [key: 'TESTPRO'],
+                       summary: 'New JIRA Created from Jenkins.',
+                       description: 'New JIRA Created from Jenkins.',
+                       issuetype: [name: 'Task']]]
+def newIssue = jiraNewIssue issue: issue, site: 'Jira Server'
+echo newIssue.data.key
 
-    response = jiraNewIssue issue: testIssue
-
-    echo response.successful.toString()
-    echo response.data.toString()
     }
         }
