@@ -17,15 +17,13 @@ echo "Connecting with jira"
 
         echo "build stage" + currentBuild.result
         
-        if(currentBuild.result=='FAILURE'){  
+       
 def issue = [fields: [ project: [key: 'TEST'],
                        summary: 'Jenkins Build Number : $BUILD_NUMBER - Failed, Selenium test cases failed hence raising Jira Issues',
                        description: 'New JIRA issue has been created from Jenkins.',
                        issuetype: [name: 'Bug']]]
 def newIssue = jiraNewIssue issue: issue, site: 'Jira Server'
 echo newIssue.data.key
-        }else {
-        echo "Nothing failed, so there is no need to create Jira issue"
-        }
+ 
     }
         }
