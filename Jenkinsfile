@@ -11,7 +11,7 @@ node ('ubuntu') {
 echo "Connecting with jira"
 
                
-        def issue = [fields: [ project: [key: 'TESTPRO'],
+        def issue = [fields: [ project: [key: 'TEST'],
                        summary: 'New JIRA Created from Jenkins.',
                        description: 'New JIRA Created from Jenkins.',
                        issuetype: [name: 'Task']]]
