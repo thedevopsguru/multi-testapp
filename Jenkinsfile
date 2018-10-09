@@ -14,7 +14,7 @@ def issue = [fields: [ project: [key: 'TEST'],
                        summary: 'New JIRA Created from Jenkins.',
                        description: 'New JIRA Created from Jenkins.',
                        issuetype: [name: 'Task']]]
-def newIssue = jiraNewIssue issue: issue, site: 'http://52.90.151.23:9090/projects/TEST/'
+def newIssue = jiraNewIssue issue: issue, site: 'http://52.90.151.23:9090/'
 echo newIssue.data.key
 }
     }
