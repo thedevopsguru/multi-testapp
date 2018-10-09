@@ -19,7 +19,7 @@ def issue = [fields: [ project: [key: 'TEST'],
 def newIssue = jiraNewIssue issue: issue, site: 'Jira Server'
 echo newIssue.data.key
         }else {
-        echo "Nothing failed.
+        echo "Nothing failed"
         }
     }
         }
