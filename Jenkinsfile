@@ -16,5 +16,6 @@ def issue = [fields: [ project: [key: 'TEST'],
                        issuetype: [name: 'Task']]]
 def newIssue = jiraNewIssue issue: issue, site: 'http://52.90.151.23:9090/projects/TEST/'
 echo newIssue.data.key
+}
     }
         }
