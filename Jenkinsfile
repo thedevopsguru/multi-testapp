@@ -1,3 +1,4 @@
+#!/usr/bin/env groovy
 node ('ubuntu') {
 
     stage ('Selenium Test_Case') {
