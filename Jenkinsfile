@@ -17,9 +17,8 @@
 	echo "Connecting with jira"
 	
 	        echo "build stage" + currentBuild.result
-          //  echo "build number" +  $BUILD_NUMBER
             echo "BUILD_NUMBER=${env.BUILD_NUMBER}"
-		     echo "JOB_NAME=${env.JOB_NAME}" 
+	    echo "JOB_NAME=${env.JOB_NAME}" 
 
 	        
 	def issue = [fields: [ project: [key: 'TEST'],
