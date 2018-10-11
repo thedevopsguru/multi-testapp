@@ -33,12 +33,6 @@
 	echo newIssue.data.key
 	        }else {
 	        echo "Nothing failed, so there is no need to create Jira issue"
-			def issue = [fields: [ project: [key: 'TEST'],
-					      summary: '${JOB_NAME} : ${BUILD_NUMBER} - Failed for Selenium test cases hence raising Jira Issue',
-	                       description: 'New JIRA issue has been created from Jenkins. Jenkins Build : ${BUILD_NUMBER} - Failed for Selenium test cases hence raising Jira Issue',
-	                       issuetype: [name: 'Bug']]]
-	def newIssue = jiraNewIssue issue: issue, site: 'Jira Server'
-	echo newIssue.data.key
 			
 	        }
 	    }
