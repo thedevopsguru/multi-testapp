@@ -1,320 +1,160 @@
-<?xml version="1.0"?>
-
--<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://maven.apache.org/POM/4.0.0">
-
-<modelVersion>4.0.0</modelVersion>
-
-<groupId>com.genpact.demo</groupId>
-
-<artifactId>App_Demo</artifactId>
-
-<version>1.0.0</version>
-
-<packaging>jar</packaging>
-
-<name>App_Demo</name>
-
-
--<parent>
-
-<groupId>org.springframework.boot</groupId>
-
-<artifactId>spring-boot-starter-parent</artifactId>
-
-<version>1.4.3.RELEASE</version>
-
-</parent>
-
-
--<properties>
-
-<java.version>1.8</java.version>
-
-<sonar.host.url>http://52.90.151.23:9000</sonar.host.url>
-
-<!-- <h2.version>1.4.187</h2.version> -->
-
-
-</properties>
-
-
--<dependencies>
-
-<!-- Add typical dependencies for a web application -->
-
-
-
--<dependency>
-
-<groupId>org.springframework.boot</groupId>
-
-<artifactId>spring-boot-starter-web</artifactId>
-
-</dependency>
-
-<!-- Add freemarker template support -->
-
-
-
--<dependency>
-
-<groupId>org.springframework.boot</groupId>
-
-<artifactId>spring-boot-starter-freemarker</artifactId>
-
-</dependency>
-
-<!-- Add JPA support -->
-
-
-
--<dependency>
-
-<groupId>org.springframework.boot</groupId>
-
-<artifactId>spring-boot-starter-data-jpa</artifactId>
-
-</dependency>
-
-<!-- Add Hikari Connection Pooling support -->
-
-
-
--<dependency>
-
-<groupId>com.zaxxer</groupId>
-
-<artifactId>HikariCP</artifactId>
-
-</dependency>
-
-<!-- Add H2 database support [for running with local profile] -->
-
-
-
--<dependency>
-
-<groupId>com.h2database</groupId>
-
-<artifactId>h2</artifactId>
-
-<!--<scope>runtime</scope> <version>${h2.version}</version> -->
-
-
-</dependency>
-
-<!-- Add MySQL database support [for running with PRODUCTION profile] -->
-
-
-
--<dependency>
-
-<groupId>mysql</groupId>
-
-<artifactId>mysql-connector-java</artifactId>
-
-</dependency>
-
-
--<dependency>
-
-<groupId>org.apache.commons</groupId>
-
-<artifactId>commons-lang3</artifactId>
-
-<version>3.5</version>
-
-</dependency>
-
-<!-- Testing -->
-
-
-
--<dependency>
-
-<groupId>org.springframework.boot</groupId>
-
-<artifactId>spring-boot-starter-test</artifactId>
-
-<scope>test</scope>
-
-</dependency>
-
-
--<dependency>
-
-<groupId>com.google.code.gson</groupId>
-
-<artifactId>gson</artifactId>
-
-<scope>test</scope>
-
-</dependency>
-
-
--<dependency>
-
-<groupId>org.springframework.boot</groupId>
-
-<artifactId>spring-boot-devtools</artifactId>
-
-<optional>true</optional>
-
-</dependency>
-
-
--<dependency>
-
-<groupId>org.codehaus.mojo</groupId>
-
-<artifactId>sonar-maven-plugin</artifactId>
-
-<version>2.7.1</version>
-
-<type>maven-plugin</type>
-
-</dependency>
-
-</dependencies>
-
-
--<build>
-
-
--<plugins>
-
-
--<plugin>
-
-<groupId>org.apache.maven.plugins</groupId>
-
-<artifactId>maven-surefire-plugin</artifactId>
-
-<version>2.22.1</version>
-
-
--<configuration>
-
-<useSystemClassLoader>false</useSystemClassLoader>
-
-</configuration>
-
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+        <modelVersion>4.0.0</modelVersion>
+
+        <groupId>com.genpact.demo</groupId>
+        <artifactId>App_Demo</artifactId>
+        <version>1.0.0</version>
+        <packaging>jar</packaging>
+
+        <name>App_Demo</name>
+
+        <parent>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-parent</artifactId>
+                <version>1.4.3.RELEASE</version>
+        </parent>
+        <properties>
+                <java.version>1.8</java.version>
+                <sonar.host.url>http://52.90.151.23:9000</sonar.host.url>
+                <!-- <h2.version>1.4.187</h2.version> -->
+        </properties>
+
+        <dependencies>
+                <!-- Add typical dependencies for a web application -->
+
+
+                <dependency>
+                        <groupId>org.springframework.boot</groupId>
+                        <artifactId>spring-boot-starter-web</artifactId>
+                </dependency>
+                <!-- Add freemarker template support -->
+                <dependency>
+                        <groupId>org.springframework.boot</groupId>
+                        <artifactId>spring-boot-starter-freemarker</artifactId>
+                </dependency>
+                <!-- Add JPA support -->
+                <dependency>
+                        <groupId>org.springframework.boot</groupId>
+                        <artifactId>spring-boot-starter-data-jpa</artifactId>
+                </dependency>
+                <!-- Add Hikari Connection Pooling support -->
+                <dependency>
+                        <groupId>com.zaxxer</groupId>
+                        <artifactId>HikariCP</artifactId>
+                </dependency>
+                <!-- Add H2 database support [for running with local profile] -->
+                <dependency>
+                        <groupId>com.h2database</groupId>
+                        <artifactId>h2</artifactId>
+                        <!--<scope>runtime</scope>
+                         <version>${h2.version}</version> -->
+                </dependency>
+                <!-- Add MySQL database support [for running with PRODUCTION profile] -->
+                <dependency>
+                        <groupId>mysql</groupId>
+                        <artifactId>mysql-connector-java</artifactId>
+                </dependency>
+                <dependency>
+                <groupId>org.apache.commons</groupId>
+                <artifactId>commons-lang3</artifactId>
+                <version>3.5</version>
+                </dependency>
+                <!-- Testing -->
+                <dependency>
+                        <groupId>org.springframework.boot</groupId>
+                        <artifactId>spring-boot-starter-test</artifactId>
+                        <scope>test</scope>
+                </dependency>
+                <dependency>
+                        <groupId>com.google.code.gson</groupId>
+                        <artifactId>gson</artifactId>
+                        <scope>test</scope>
+                </dependency>
+                <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-devtools</artifactId>
+                <optional>true</optional>
+        </dependency>
+        <dependency>
+        <groupId>org.codehaus.mojo</groupId>
+        <artifactId>sonar-maven-plugin</artifactId>
+        <version>2.7.1</version>
+        <type>maven-plugin</type>
+    </dependency>
+        </dependencies>
+        <build>
+                <plugins>
+
+        <plugin>
+    <groupId>org.apache.maven.plugins</groupId>
+    <artifactId>maven-surefire-plugin</artifactId>
+    <version>2.22.1</version>
+    <configuration>
+        <useSystemClassLoader>false</useSystemClassLoader>
+    </configuration>
 </plugin>
 
-
--<plugin>
-
-<groupId>org.glassfish.build</groupId>
-
-<artifactId>gfnexus-maven-plugin</artifactId>
-
-<version>0.16</version>
-
-
--<configuration>
-
-
--<stagingRepos>
-
-
--<stagingRepo>
-
-<!-- The reference artifact used to identify the right staging repository -->
-
-
-<ref>org.glassfish.jersey:project:${project.version}:pom</ref>
-
-<profile>com.sun.jersey</profile>
-
-</stagingRepo>
-
-</stagingRepos>
-
-<!-- Temporary till there is a jersey promotion profile -->
-
-
-<promotionProfile>glassfish-integration</promotionProfile>
-
-<message>JERSEY-${project.version}</message>
-
-</configuration>
-
-</plugin>
-
-
--<plugin>
-
-<groupId>org.sonatype.plugins</groupId>
-
-<artifactId>nexus-staging-maven-plugin</artifactId>
-
-
--<executions>
-
-
--<execution>
-
-<id>default-deploy</id>
-
-<phase>deploy</phase>
-
-
--<goals>
-
-<goal>deploy</goal>
-
-</goals>
-
-</execution>
-
-</executions>
-
-
--<configuration>
-
-<serverId>jvnet-nexus-staging</serverId>
-
-<nexusUrl>https://maven.java.net/</nexusUrl>
-
-</configuration>
-
-</plugin>
-
-
--<plugin>
-
-<!-- Include if you want to make an executable jar[FAT JAR which includes all dependencies along with sprinboot loader] that you can run on commandline using java -jar NAME -->
-
-
-<groupId>org.springframework.boot</groupId>
-
-<artifactId>spring-boot-maven-plugin</artifactId>
-
-
--<configuration>
-
-<addResources>true</addResources>
-
-</configuration>
-
-</plugin>
-
-
--<plugin>
-
-<groupId>org.sonatype.plugins</groupId>
-
-<artifactId>nexus-staging-maven-plugin</artifactId>
-
-<version>1.6.7</version>
-
-</plugin>
-
-<!-- <plugin> <groupId>org.sonarsource.scanner.maven</groupId> <artifactId>sonar-maven-plugin</artifactId> <version>3.2</version> </plugin> -->
-
-
-</plugins>
-
-</build>
-
+                 <plugin>
+                    <groupId>org.glassfish.build</groupId>
+                    <artifactId>gfnexus-maven-plugin</artifactId>
+                    <version>0.16</version>
+                    <configuration>
+                        <stagingRepos>
+                            <stagingRepo>
+                                <!--
+                                    The reference artifact used to identify the right staging repository
+                                -->
+                                <ref>org.glassfish.jersey:project:${project.version}:pom</ref>
+                                <profile>com.sun.jersey</profile>
+                            </stagingRepo>
+                        </stagingRepos>
+                        <!--
+                            Temporary till there is a jersey promotion profile
+                        -->
+                        <promotionProfile>glassfish-integration</promotionProfile>
+                        <message>JERSEY-${project.version}</message>
+                    </configuration>
+                </plugin>
+                                <plugin>
+                        <groupId>org.sonatype.plugins</groupId>
+                        <artifactId>nexus-staging-maven-plugin</artifactId>
+                        <executions>
+                            <execution>
+                                <id>default-deploy</id>
+                                <phase>deploy</phase>
+                                <goals>
+                                    <goal>deploy</goal>
+                                </goals>
+                            </execution>
+                        </executions>
+                        <configuration>
+                            <serverId>jvnet-nexus-staging</serverId>
+                            <nexusUrl>https://maven.java.net/</nexusUrl>
+                        </configuration>
+                    </plugin>
+                        <plugin><!-- Include if you want to make an executable jar[FAT JAR which
+                                        includes all dependencies along with sprinboot loader] that you can run on
+                                        commandline using java -jar NAME -->
+                                <groupId>org.springframework.boot</groupId>
+                                <artifactId>spring-boot-maven-plugin</artifactId>
+                                <configuration>
+                    <addResources>true</addResources>
+                </configuration>
+                        </plugin>
+
+                         <plugin>
+                            <groupId>org.sonatype.plugins</groupId>
+                            <artifactId>nexus-staging-maven-plugin</artifactId>
+                            <version>1.6.7</version>
+                        </plugin>
+
+
+                        <!-- <plugin>
+                                                      <groupId>org.sonarsource.scanner.maven</groupId>
+                                                      <artifactId>sonar-maven-plugin</artifactId>
+                                                      <version>3.2</version>
+                                                  </plugin> -->
+                </plugins>
+        </build>
 </project>
