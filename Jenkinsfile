@@ -4,7 +4,7 @@ node ('ubuntu') {
 
     stage ('checkout') {
 
-        git url: 'https://github.com/dhineshk6/multi-testapp.git'
+        git url: 'https://github.com/thedevopsguru/multi-testapp.git'
 
     }
 
@@ -31,6 +31,5 @@ node ('ubuntu') {
     stage ('Build & Deploy Image') {
         
      sh 'docker build -t app .'
-     sh 'docker run -t -d -p 9090:9090 app'
     }
     }
